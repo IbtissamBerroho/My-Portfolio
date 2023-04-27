@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalise.css">
+    <title>Document</title>
+    <style>
+        .photos{
+            height: 100vh;
+            background-image: url("images/img1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="photos">
+    </div>
+    <script>
+        landingPage = document.querySelector(".photos");
+        tableuImages = ["img1.jpg","img2.jpg","img3.jpg"]
+
+        setInterval(() => {
+            RandomNumber = Math.floor(Math.random() * tableuImages.length);
+            landingPage.style.backgroundImage = "url('images/"+tableuImages[RandomNumber]+"')"
+        }, 1000);
+    </script>
+</body>
+</html>
